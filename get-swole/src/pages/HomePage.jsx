@@ -28,7 +28,7 @@ const HomePage = () => {
 	};
 
 	useEffect(() => {
-		fetchRecipes("chicken");
+		fetchRecipes("pasta");
 	}, []);
 
 	const handleSearchRecipe = (e) => {
@@ -38,20 +38,24 @@ const HomePage = () => {
 
 	return (
 		<div className='bg-[#faf9fb] p-10 flex-1'>
+            
 			<div className='max-w-screen-lg mx-auto'>
-				<form onSubmit={handleSearchRecipe}>
-					<label className='input shadow-md flex items-center gap-2'>
+            <h1 className="text-2xl mb-3 text-black"><span className="font-bold">Welcome</span> to our delightful haven of culinary creations, where every recipe is a journey for your taste buds! Our extensive library is a feast for the eyes and the palate, brimming with mouth-watering dishes that come to life in vibrant YouTube videos. Whether you're a seasoned chef or a kitchen newbie, our step-by-step guides make cooking a breeze and eating an adventure. So tie on your apron, hit play, and let's whip up some fun in the kitchen together!</h1>
+				<p></p>
+                <br/>
+                <form onSubmit={handleSearchRecipe}>
+					<label className='input shadow-md flex text-white items-center gap-2 bg-red-700'>
 						<Search size={"24"} />
 						<input
 							type='text'
-							className='text-sm md:text-md grow'
+							className='text-sm placeholder-white md:text-md grow'
 							placeholder='What do you want to cook today?'
 						/>
 					</label>
 				</form>
 
-				<h1 className='font-bold text-3xl md:text-5xl mt-4'>Recommended Recipes</h1>
-				<p className='text-slate-500 font-semibold ml-1 my-2 text-sm tracking-tight'>Popular choices</p>
+				<h1 className='font-serif font-bold text-3xl text-black md:text-5xl mt-4'>Recommended Recipes</h1>
+				<p className='text-black font-semibold ml-1 my-2 text-sm tracking-tight'>Popular choices</p>
 
 				<div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
 					{!loading &&

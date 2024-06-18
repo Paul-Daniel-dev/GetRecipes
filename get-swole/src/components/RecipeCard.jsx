@@ -25,7 +25,7 @@ const RecipeCard = ({ recipe, bg, badge }) => {
 	};
 
 	return (
-		<div className={`flex flex-col rounded-md ${bg} overflow-hidden p-3 relative`}>
+		<div className={`flex flex-col rounded-md ${bg} overflow-hidden p-3 relative text-black`}>
 			<a
 				href={`https://www.youtube.com/results?search_query=${recipe.label} recipe`}
 				target='_blank'

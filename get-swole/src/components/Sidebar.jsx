@@ -15,20 +15,20 @@ export default Sidebar;
 
 const DesktopSidebar = () => {
   return (
-    <div className="p-3 md:p-10 border-r min-h-screen w-24 md:w-64 hidden sm:block">
+    <div className="p-3 md:p-10 bg-red-700 border-r min-h-screen w-24 md:w-64 hidden sm:block">
       <div className="flex flex-col gap-20 sticky top-10 left-0">
         <div className="w-full">
-          <img src="/thelogo.jpg" alt="logo" className="hidden md:block" />
-          <img src="/thelogo.jpg" alt="logo" className="block md:hidden" />
+          <img src="/Logo.jpg" alt="logo" className="rounded-full border-red-700 border-4 hidden md:block" />
+          <img src="/Logo.jpg" alt="logo" className="rounded-full border-red-700 border-4 block md:hidden" />
         </div>
         <ul className="flex flex-col items-center md:items-start gap-8">
           <Link to={"/"} className="flex gap-1">
-            <Home size={"24"} />
-            <span className="font-bold hidden md:block">Home</span>
+            <Home className="fill-white border-white" size={"24"} />
+            <span className="font-bold text-white hidden md:block">Home</span>
           </Link>
           <Link to={"/favorites"} className="flex gap-1">
-            <Heart size={"24"} />
-            <span className="font-bold hidden md:block">Favourite Recipes</span>
+            <Heart className="fill-white border-white" size={"24"} />
+            <span className="font-bold text-white hidden md:block">Favourite Recipes</span>
           </Link>
         </ul>
       </div>
